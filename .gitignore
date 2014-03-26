@@ -1,0 +1,71 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package calculator;
+
+/**
+ *
+ * @author Esra Betül
+ */
+import java.util.Scanner;
+public class Calculator {
+
+    /**
+     * @param args the command line arguments
+     */
+   
+    public static void main(String[] args) 
+    {
+        // TODO code application logic here
+        Scanner input= new Scanner(System.in);
+        
+        double sayi1,sayi2,sonuc;
+    
+        int secim;
+   
+        do
+        {
+        System.out.println("İki sayi giriniz:");
+        sayi1=input.nextDouble();
+        sayi2=input.nextDouble();
+        System.out.println("1)Toplama\n2)Çıkarma\n3)Çarpma\n4)Bölme\n5)ÇIKIŞ");
+        System.out.println("Bir seçim yapınız:");
+        secim=input.nextInt();    
+     
+           if(secim==1)
+           {
+            sonuc=sayi1+sayi2;
+            System.out.println("Sonuç="+sonuc);
+           }
+        
+           else if(secim==2)
+           {
+            sonuc=sayi1-sayi2;
+            System.out.println("Sonuç="+sonuc);
+           }
+           
+           else if(secim==3)
+           {
+            sonuc=sayi1*sayi2;
+            System.out.println("Sonuç="+sonuc);
+           }
+           
+           else if(secim==4)
+           {
+             sonuc=sayi1/sayi2;
+            System.out.println("Sonuç="+sonuc);}
+              
+           else if(secim==5)
+           {
+           System.out.println("Çıkış işleminiz gerçekleştirilmiştir...");
+           }
+              
+           else
+                System.out.println("Yanlış giriş yaptınız. 1-5 arası bir seçim yapmalısınız!"); //Kod buradan sonra başa döner ve kullanıcıdan yine sayı girmesini ister. 
+        }
+        while(secim != 5);  //menüde 5.seçim yapılıncaya kadar döngü kodlarını çalıştırmaya devam eder.
+    }
+}
